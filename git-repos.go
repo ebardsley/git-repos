@@ -22,7 +22,7 @@ func main() {
 			if !i.IsDir() {
 				return nil
 			}
-			if strings.HasPrefix(i.Name(), ".") {
+			if p != "." && p != "./" && strings.HasPrefix(i.Name(), ".") {
 				return filepath.SkipDir
 			}
 
